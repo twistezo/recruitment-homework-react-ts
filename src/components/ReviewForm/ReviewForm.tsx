@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Form, formDefault } from './types'
 import { SEND_REVIEW } from 'api'
 import { useMutation } from '@apollo/client'
@@ -33,17 +33,29 @@ const ReviewForm: React.FC = () => {
 
       <div>
         <label htmlFor='id'>Id: </label>
-        <input id='id' value={review.id} onChange={setValue} />
+        <input
+          id='id'
+          value={review.id}
+          onChange={setValue}
+        />
       </div>
 
       <div>
         <label htmlFor='rating'>Rating: </label>
-        <input id='rating' value={review.rating} onChange={setValue} />
+        <input
+          id='rating'
+          value={review.rating}
+          onChange={setValue}
+        />
       </div>
 
       <div>
         <label htmlFor='comment'>Comment: </label>
-        <input id='comment' value={review.comment} onChange={setValue} />
+        <input
+          id='comment'
+          value={review.comment}
+          onChange={setValue}
+        />
       </div>
 
       {sendReviewLoading ? 'Sending...' : <button onClick={onSend}>Send</button>}

@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { ReviewShape } from './types'
 import Review from './Review'
 

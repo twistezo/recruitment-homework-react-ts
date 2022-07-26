@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Location from 'components/Location'
 import ReviewForm from 'components/ReviewForm'
 import { useLazyQuery } from '@apollo/client'
@@ -13,14 +13,13 @@ const LocationBox: React.FC = () => {
   const [lastLocationId, setLastLocationId] = useState<string>()
   const { location, setLocation, shouldReload, setShouldReload } = useContext(LocationBoxContext)
 
-  const [getLocationsId, { loading: getLocationsIdLoading }] = useLazyQuery<GetLocationsIdData>(
-    GET_LOCATIONS_ID
-  )
+  const [getLocationsId, { loading: getLocationsIdLoading }] =
+    useLazyQuery<GetLocationsIdData>(GET_LOCATIONS_ID)
   const [getLocation, { loading: getLocationLoading }] = useLazyQuery<
     GetLocationData,
     GetLocationInput
   >(GET_LOCATION, {
-    fetchPolicy: 'no-cache'
+    fetchPolicy: 'no-cache',
   })
 
   useEffect(() => {
@@ -32,7 +31,7 @@ const LocationBox: React.FC = () => {
         setLocationsId(ids)
       }
     })
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(() => {
     if (locationsId.length > 0) {
@@ -44,7 +43,7 @@ const LocationBox: React.FC = () => {
     if (lastLocationId && shouldReload) {
       service.fetchLocation({ lastLocationId, getLocation, setLocation, setShouldReload })
     }
-  }, [lastLocationId, shouldReload])
+  }, [lastLocationId, shouldReload]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className='LocationBox'>

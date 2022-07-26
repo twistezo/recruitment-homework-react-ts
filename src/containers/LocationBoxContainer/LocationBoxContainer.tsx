@@ -1,3 +1,4 @@
+import React from 'react'
 import LocationBox from 'components/LocationBox'
 import { LocationBoxContextProvider } from 'contexts/LocationBoxContext'
 

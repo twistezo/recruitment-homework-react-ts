@@ -12,7 +12,7 @@
     "prettier/prettier": "warn"
   },
   "parserOptions": {
-    "ecmaVersion": "esnext"
+    "ecmaVersion": "latest"
   },
   "env": {
     "browser": true,

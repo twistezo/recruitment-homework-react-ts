@@ -4,12 +4,11 @@
 .ReviewForm {
   padding: 0 0 $padding $padding;
 
-  &__title{
+  &__title {
     color: $yellow;
   }
 
   label {
-   padding: $padding; 
+    padding: $padding;
   }
-
 }

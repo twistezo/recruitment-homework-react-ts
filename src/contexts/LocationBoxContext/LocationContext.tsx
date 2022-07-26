@@ -2,14 +2,14 @@ import React, { createContext, useEffect, useState } from 'react'
 import {
   LocationBoxContextProps,
   locationBoxContextDefault,
-  LocationBoxContextProviderProps
+  LocationBoxContextProviderProps,
 } from './types'
 import { LocationShape } from 'components/Location'
 
 export const LocationBoxContext = createContext<LocationBoxContextProps>(locationBoxContextDefault)
 
 export const LocationBoxContextProvider: React.FC<LocationBoxContextProviderProps> = ({
-  children
+  children,
 }) => {
   const [location, setLocation] = useState<LocationShape>()
   const [shouldReload, setShouldReload] = useState<boolean>(true)

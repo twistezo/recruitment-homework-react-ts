@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { LocationShape } from './types'
 import Reviews from 'components/Reviews'
 import './Location.scss'
@@ -9,7 +9,11 @@ const Location = (loc: LocationShape): ReactNode => (
       {loc.name} (Id: {loc.id}, rating: {loc.overallRating})
     </div>
 
-    <img className='Location__photo' alt={loc.name} src={loc.photo} />
+    <img
+      className='Location__photo'
+      alt={loc.name}
+      src={loc.photo}
+    />
 
     <div>{loc.description}</div>
 

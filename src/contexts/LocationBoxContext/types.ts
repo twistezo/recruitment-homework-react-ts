@@ -16,5 +16,5 @@ export const locationBoxContextDefault: LocationBoxContextProps = {
   location: undefined,
   setLocation: () => void {},
   shouldReload: true,
-  setShouldReload: () => void {}
+  setShouldReload: () => void {},
 }
