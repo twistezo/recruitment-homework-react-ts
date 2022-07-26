@@ -1,0 +1,20 @@
+@import '../../styles/colors';
+@import '../../styles/constants';
+
+.Location {
+  padding: $padding;
+
+  &__title {
+    font-size: 24px;
+    color: $green;
+  }
+
+  &__photo {
+    width: 200px;
+    padding: $padding 0;
+  }
+
+  &__reviews {
+    padding-top: $padding;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../../styles/colors';
+@import '../../styles/constants';
+
+.Review{
+  padding: 0 0 $padding $padding;
+
+  &__title {
+    color: $orange;
+  }
+
+  &__comment {
+    color: $orange;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../styles/colors';
+@import '../../styles/constants';
+
+.ReviewForm {
+  padding: 0 0 $padding $padding;
+
+  &__title{
+    color: $yellow;
+  }
+
+  label {
+   padding: $padding; 
+  }
+
+}
